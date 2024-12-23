@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 
 
@@ -113,3 +114,24 @@ ax.legend()
 st.pyplot(fig)
 
 
+# Ensure the output directory exists
+output_dir = "output"
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Your plotting code...
+plt.plot(df['Start'], df['Avg RTT UL (ms)'], label='Avg RTT UL (ms)', color='blue')
+plt.title('Avg RTT UL (ms) Over Time')
+plt.xlabel('Start Time')
+plt.ylabel('Avg RTT UL (ms)')
+
+# Save the plot to the 'output' folder
+output_path = os.path.join(output_dir, "graph.png")
+plt.savefig(output_path)
+
+# Optionally, display the plot in Streamlit
+plt.show()
+
+
+# Save the plot as an image
+plt.savefig("output/graph.png")
