@@ -62,3 +62,4 @@ if len(numeric_columns) > 0:
 # Streamlit needs to run with the `streamlit run` command, not python directly
 st.write("To view the app, please run this file using the following command:")
 st.write("`streamlit run C:/Users/teble/telecom-analysis/scripts/dashboard.py`")
+# Local URL: http://localhost:8501
