@@ -74,4 +74,3 @@ pca = PCA(n_components=2)
 pca_result = pca.fit_transform(scaled_data)
 
 print("Explained Variance Ratio:", pca.explained_variance_ratio_)
-
